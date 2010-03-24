@@ -44,7 +44,7 @@
 	<key>Creator</key>
 	<string>Aza Raskin</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>ExportShapes</key>
 	<array>
 		<dict>
@@ -4317,7 +4317,7 @@ Simply drag one group into another.}</string>
 				<string>{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
 {\fonttbl\f0\fnil\fcharset0 DroidSans;}
 {\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
 \f0\fs28 \cf0 Groups Within Groups}</string>
 				<key>VerticalPad</key>
@@ -4328,7 +4328,7 @@ Simply drag one group into another.}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1226, 121}, {279.5, 258}}</string>
+			<string>{{1511.5, 146.806}, {279.5, 258}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -4404,9 +4404,8 @@ Simply drag one group into another.}</string>
 
 \b 2.
 \b0  	Users can better manage the sites that they want to read later but don't want to bookmark. [qualitative] \
-\pard\tx500\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li520\fi-520\slleading30\ql\qnatural
 
-\b \cf0 3.
+\b 3.
 \b0  	People can still move quickly between a small set of tabs (i.e., the random access that the traditional tabs interface gives). [both]\
 
 \b 4.
@@ -4427,7 +4426,7 @@ Simply drag one group into another.}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1221.5, 95.1941}, {115, 19}}</string>
+			<string>{{1507, 121}, {115, 19}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -4473,7 +4472,7 @@ Simply drag one group into another.}</string>
 				<string>{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
 {\fonttbl\f0\fnil\fcharset0 DroidSans;}
 {\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
 \f0\fs28 \cf0 Metrics of Success}</string>
 				<key>VerticalPad</key>
@@ -4858,7 +4857,7 @@ Simply drag one group into another.}</string>
 			<integer>45733</integer>
 			<key>Points</key>
 			<array>
-				<string>{242.363, 1038.94}</string>
+				<string>{242.364, 1038.94}</string>
 				<string>{335.917, 1038.92}</string>
 			</array>
 			<key>Style</key>
@@ -5012,55 +5011,74 @@ Simply drag one group into another.}</string>
 								hAFpApKElpYQ
 								TlNQYXJhZ3Jh
 								cGhTdHlsZYaS
-								hISEF05TTXV0
-								YWJsZVBhcmFn
-								cmFwaFN0eWxl
-								AISEEE5TUGFy
+								hISEEE5TUGFy
 								YWdyYXBoU3R5
 								bGUAlIQEQ0NA
-								UwAAhQCGkoSW
-								lgZOU0ZvbnSG
-								koSEhAZOU0Zv
-								bnQelJkchAVb
-								MjhjXQYAAAAU
-								AAAA//5IAGUA
-								bAB2AGUAdABp
-								AGMAYQCEAWYM
-								hAFjAKABoACg
-								AIaGlwIEkoSY
-								mQWShJaWDk5T
-								T3JpZ2luYWxG
-								b250hpKEn5ko
-								hAVbNDBjXQYA
-								AAAeAAAA//5I
-								AGUAbAB2AGUA
-								dABpAGMAYQAt
-								AEIAbwBsAGQA
-								AACfDKAAoAGg
-								AKAAhpKElpYL
+								UwQAhISEB05T
+								QXJyYXkAlJkM
+								koSEhAlOU1Rl
+								eHRUYWIAlIQC
+								Q2YAHIaShJ+e
+								ADiGkoSfngBU
+								hpKEn54AcIaS
+								hJ+eAIGMAIaS
+								hJ+eAIGoAIaS
+								hJ+eAIHEAIaS
+								hJ+eAIHgAIaS
+								hJ+eAIH8AIaS
+								hJ+eAIEYAYaS
+								hJ+eAIE0AYaS
+								hJ+eAIFQAYaG
+								AIaShJaWBk5T
+								Rm9udIaShISE
+								Bk5TRm9udB6U
+								mRyEBVsyOGNd
+								BgAAABQAAAD/
+								/kgAZQBsAHYA
+								ZQB0AGkAYwBh
+								AIQBZgyEAWMA
+								ogGiAKIAhoaX
+								AgSShJiZBZKE
+								lpYLTlNVbmRl
+								cmxpbmWGkoSE
+								hAhOU051bWJl
+								cgCEhAdOU1Zh
+								bHVlAJSEASqE
+								mZkBhpKElpYQ
 								TlNVbmRlcmxp
-								bmWGkoSEhAhO
-								U051bWJlcgCE
-								hAdOU1ZhbHVl
-								AJSEASqEmZkB
-								hpKdkqKShJaW
+								bmVDb2xvcoaS
+								hISEB05TQ29s
+								b3IAlKIBhARm
+								ZmZmg9XUVD6D
+								jYyMPoPz8nI/
+								AYaSmZKEm5sE
+								AISdmQySnpKg
+								kqGSopKjkqSS
+								pZKmkqeSqJKp
+								kqqGAIaShJaW
 								B05TQ29sb3KG
-								koSEhAdOU0Nv
-								bG9yAJSgAoQE
-								ZmZmZoPq6Gg+
-								g4GAgD4BAYaS
-								mZKahpcDBZKE
-								mJkDkqiSqZKd
-								kp6SmZKahoY=
+								koS2ogKng+ro
+								aD6DgYCAPgEB
+								hpKrkoStmSiE
+								BVs0MGNdBgAA
+								AB4AAAD//kgA
+								ZQBsAHYAZQB0
+								AGkAYwBhAC0A
+								QgBvAGwAZAAA
+								AKEMogCiAaIA
+								ogCGhpcDBZKE
+								mJkEkpmSt5K0
+								krWSq5KskrmS
+								uoaG
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red53\green70\blue242;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+{\colortbl;\red255\green255\blue255;\red53\green70\blue242;\red53\green70\blue242;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
 \f0\fs24 \cf0 view as 
-\b \cf2 \ul \ulc2 icon
+\b \cf2 \ul \ulc3 icon
 \b0 \ulnone  list}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
@@ -6129,25 +6147,24 @@ Shopping}</string>
 						hIQITlNPYmplY3QAhZKEhIQITlNT
 						dHJpbmcBlIQBKwhTaG9wcGluZ4aE
 						AmlJAQiShISEDE5TRGljdGlvbmFy
-						eQCUhAFpBZKElpYOTlNPcmlnaW5h
-						bEZvbnSGkoSEhAZOU0ZvbnQelJkc
-						hAVbMjhjXQYAAAAUAAAA//5IAGUA
-						bAB2AGUAdABpAGMAYQCEAWYRhAFj
-						AJ0BnQCdAIaShJaWBk5TRm9udIaS
-						mpKElpYGTlNLZXJuhpKEhIQITlNO
-						dW1iZXIAhIQHTlNWYWx1ZQCUhAEq
-						hIQBZKEAhpKElpYHTlNDb2xvcoaS
-						hISEB05TQ29sb3IAlJ0DhAJmZgCD
-						w/VoP4aShJaWEE5TUGFyYWdyYXBo
-						U3R5bGWGkoSEhBBOU1BhcmFncmFw
-						aFN0eWxlAJSEBENDQFMEAISEhAdO
-						U0FycmF5AJSZDJKEhIQJTlNUZXh0
-						VGFiAJSEAkNmAByGkoSrqAA4hpKE
-						q6gAVIaShKuoAHCGkoSrqACBjACG
-						koSrqACBqACGkoSrqACBxACGkoSr
-						qACB4ACGkoSrqACB/ACGkoSrqACB
-						GAGGkoSrqACBNAGGkoSrqACBUAGG
-						hgCGhoY=
+						eQCUhAFpBJKElpYQTlNQYXJhZ3Jh
+						cGhTdHlsZYaShISEEE5TUGFyYWdy
+						YXBoU3R5bGUAlIQEQ0NAUwQAhISE
+						B05TQXJyYXkAlJkMkoSEhAlOU1Rl
+						eHRUYWIAlIQCQ2YAHIaShJ+eADiG
+						koSfngBUhpKEn54AcIaShJ+eAIGM
+						AIaShJ+eAIGoAIaShJ+eAIHEAIaS
+						hJ+eAIHgAIaShJ+eAIH8AIaShJ+e
+						AIEYAYaShJ+eAIE0AYaShJ+eAIFQ
+						AYaGAIaShJaWB05TQ29sb3KGkoSE
+						hAdOU0NvbG9yAJSEAWMDhAJmZgCD
+						w/VoP4aShJaWBk5TRm9udIaShISE
+						Bk5TRm9udB6UmRyEBVsyOGNdBgAA
+						ABQAAAD//kgAZQBsAHYAZQB0AGkA
+						YwBhAIQBZhGgAKABoACgAIaShJaW
+						Bk5TS2VyboaShISECE5TTnVtYmVy
+						AISEB05TVmFsdWUAlIQBKoSEAWSo
+						AIaGhg==
 						</data>
 						<key>Text</key>
 						<string>{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
@@ -7358,15 +7375,15 @@ Shopping}</string>
 						n54AgagAhpKEn54AgcQAhpKEn54A
 						geAAhpKEn54AgfwAhpKEn54AgRgB
 						hpKEn54AgTQBhpKEn54AgVABhoYA
-						hpKElpYHTlNDb2xvcoaShISEB05T
-						Q29sb3IAlIQBYwOEAmZmAIMpXA8+
-						hpKElpYGTlNGb250hpKEhIQGTlNG
-						b250HpSZLIQFWzQ0Y10GAAAAJAAA
-						AP/+SABlAGwAdgBlAHQAaQBjAGEA
-						LQBPAGIAbABpAHEAdQBlAIQBZhGg
-						AKABoACgAIaShJaWBk5TS2VyboaS
-						hISECE5TTnVtYmVyAISEB05TVmFs
-						dWUAlIQBKoSEAWSoAIaGhg==
+						hpKElpYGTlNLZXJuhpKEhIQITlNO
+						dW1iZXIAhIQHTlNWYWx1ZQCUhAEq
+						hIQBZKIAhpKElpYGTlNGb250hpKE
+						hIQGTlNGb250HpSZLIQFWzQ0Y10G
+						AAAAJAAAAP/+SABlAGwAdgBlAHQA
+						aQBjAGEALQBPAGIAbABpAHEAdQBl
+						AIQBZhGEAWMApgGmAKYAhpKElpYH
+						TlNDb2xvcoaShISEB05TQ29sb3IA
+						lKYDhAJmZgCDKVwPPoaGhg==
 						</data>
 						<key>Text</key>
 						<string>{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
@@ -8587,51 +8604,49 @@ This list should be extensible by extensions.}</string>
 								KwROYW1lhoQC
 								aUkBBJKEhIQM
 								TlNEaWN0aW9u
-								YXJ5AJSEAWkF
-								koSWlg5OU09y
-								aWdpbmFsRm9u
-								dIaShISEBk5T
-								Rm9udB6UmSyE
-								BVs0NGNdBgAA
-								ACQAAAD//kgA
-								ZQBsAHYAZQB0
-								AGkAYwBhAC0A
-								TwBiAGwAaQBx
-								AHUAZQCEAWYR
-								hAFjAJ0BnQCd
-								AIaShJaWBk5T
-								Rm9udIaSmpKE
+								YXJ5AJSEAWkE
+								koSWlhBOU1Bh
+								cmFncmFwaFN0
+								eWxlhpKEhIQQ
+								TlNQYXJhZ3Jh
+								cGhTdHlsZQCU
+								hARDQ0BTBACE
+								hIQHTlNBcnJh
+								eQCUmQyShISE
+								CU5TVGV4dFRh
+								YgCUhAJDZgAc
+								hpKEn54AOIaS
+								hJ+eAFSGkoSf
+								ngBwhpKEn54A
+								gYwAhpKEn54A
+								gagAhpKEn54A
+								gcQAhpKEn54A
+								geAAhpKEn54A
+								gfwAhpKEn54A
+								gRgBhpKEn54A
+								gTQBhpKEn54A
+								gVABhoYAhpKE
 								lpYGTlNLZXJu
 								hpKEhIQITlNO
 								dW1iZXIAhIQH
 								TlNWYWx1ZQCU
-								hAEqhIQBZKEA
-								hpKElpYHTlND
-								b2xvcoaShISE
-								B05TQ29sb3IA
-								lJ0DhAJmZgCD
-								KVwPPoaShJaW
-								EE5TUGFyYWdy
-								YXBoU3R5bGWG
-								koSEhBBOU1Bh
-								cmFncmFwaFN0
-								eWxlAJSEBEND
-								QFMEAISEhAdO
-								U0FycmF5AJSZ
-								DJKEhIQJTlNU
-								ZXh0VGFiAJSE
-								AkNmAByGkoSr
-								qAA4hpKEq6gA
-								VIaShKuoAHCG
-								koSrqACBjACG
-								koSrqACBqACG
-								koSrqACBxACG
-								koSrqACB4ACG
-								koSrqACB/ACG
-								koSrqACBGAGG
-								koSrqACBNAGG
-								koSrqACBUAGG
-								hgCGhoY=
+								hAEqhIQBZKIA
+								hpKElpYGTlNG
+								b250hpKEhIQG
+								TlNGb250HpSZ
+								LIQFWzQ0Y10G
+								AAAAJAAAAP/+
+								SABlAGwAdgBl
+								AHQAaQBjAGEA
+								LQBPAGIAbABp
+								AHEAdQBlAIQB
+								ZhGEAWMApgGm
+								AKYAhpKElpYH
+								TlNDb2xvcoaS
+								hISEB05TQ29s
+								b3IAlKYDhAJm
+								ZgCDKVwPPoaG
+								hg==
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
@@ -13363,8 +13378,6 @@ Name}</string>
 					</dict>
 				</dict>
 			</dict>
-			<key>TextRelativeArea</key>
-			<string>{{0, 0}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -13402,7 +13415,7 @@ Name}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{864.492, 316.737}, {149.374, 48}}</string>
+			<string>{{864.492, 316.737}, {149.374, 128}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -13450,7 +13463,9 @@ Name}</string>
 {\colortbl;\red255\green255\blue255;\red73\green73\blue73;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
-\f0\fs22 \cf2 You can resize a group, which scales everything inside of it. Feedback is given in real time.}</string>
+\f0\fs22 \cf2 You can resize a group, which scales everything inside of it. Feedback is given in real time.\
+\
+Resizing isn't aspect-constrained, so that you can have thin groups or square groups.}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
@@ -15391,7 +15406,7 @@ An optimum space-efficient layout should be used.}</string>
 				<string>{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
 {\fonttbl\f0\fnil\fcharset0 DroidSans;}
 {\colortbl;\red255\green255\blue255;\red73\green73\blue73;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
 \f0\fs22 \cf2 Dragging two pages together forms a group. }</string>
 				<key>VerticalPad</key>
@@ -16611,7 +16626,7 @@ An optimum space-efficient layout should be used.}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2010-03-18 23:40:46 -0700</string>
+	<string>2010-03-23 15:27:16 -0700</string>
 	<key>Modifier</key>
 	<string>Aza Raskin</string>
 	<key>NotesVisible</key>
@@ -16637,7 +16652,7 @@ An optimum space-efficient layout should be used.}</string>
 		<key>NSPaperName</key>
 		<array>
 			<string>string</string>
-			<string>Really Big</string>
+			<string>0D8A266A-C47A-4962-9376-D0BE2371662D</string>
 		</array>
 		<key>NSPaperSize</key>
 		<array>
@@ -16687,7 +16702,7 @@ An optimum space-efficient layout should be used.}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{48, 4}, {1212, 774}}</string>
+		<string>{{54, -12}, {1212, 774}}</string>
 		<key>ListView</key>
 		<false/>
 		<key>OutlineWidth</key>
@@ -16697,11 +16712,11 @@ An optimum space-efficient layout should be used.}</string>
 		<key>ShowRuler</key>
 		<true/>
 		<key>Sidebar</key>
-		<false/>
+		<true/>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{251, 1418}, {1184, 605}}</string>
+		<string>{{0, 0}, {1063, 605}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
