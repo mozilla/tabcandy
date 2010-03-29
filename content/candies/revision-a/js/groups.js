@@ -147,7 +147,6 @@ Group.prototype = {
   
   // ----------  
   pushAway: function() {
-  	return; //doesn't work in this version of groups.js
     var buffer = 10;
     
     var items = Items.getTopLevelItems();
