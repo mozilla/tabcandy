@@ -147,6 +147,7 @@ else {
     get unread(){ return this._unreadCount; }
   }  
   context.Toolbar = Toolbar;
+  Toolbar._render();
 }
 
 })(window);
