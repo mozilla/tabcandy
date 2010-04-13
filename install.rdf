@@ -3,8 +3,8 @@
  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
     <em:id>tabcandy@aza.raskin</em:id>
-    <em:name>Tab Candy</em:name>
-    <em:version>1.0</em:version>
+    <em:name>TabCandy</em:name>
+    <em:version>0.1</em:version>
     <em:creator>Aza Raskin</em:creator>
     <em:description>Tab Candy</em:description>
     <em:iconURL>chrome://tabcandy/content/tabcandy.png</em:iconURL>
