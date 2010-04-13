@@ -4,12 +4,8 @@
 <overlay id="tabcandy-overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script src="overlay.js"/>
+  <script type="text/javascript;version=1.8" src="chrome://tabcandy/content/js/core/toolbar-button.js"></script>  
   <stringbundleset id="stringbundleset">
     <stringbundle id="tabcandy-strings" src="chrome://tabcandy/locale/tabcandy.properties"/>
   </stringbundleset>
-
-  <menupopup id="menu_ToolsPopup">
-    <menuitem id="tabcandy-hello" label="&tabcandy.label;" 
-              oncommand="tabcandy.onMenuItemCommand(event);"/>
-  </menupopup>
 </overlay>
