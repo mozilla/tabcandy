@@ -2,7 +2,7 @@ var indexSectionsWithContent = {
    "General": {
       "Symbols": true,
       "Numbers": false,
-      "A": false,
+      "A": true,
       "B": true,
       "C": true,
       "D": true,
@@ -62,7 +62,7 @@ var indexSectionsWithContent = {
    "Functions": {
       "Symbols": true,
       "Numbers": false,
-      "A": false,
+      "A": true,
       "B": false,
       "C": false,
       "D": false,
