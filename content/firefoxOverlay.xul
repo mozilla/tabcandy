@@ -8,4 +8,14 @@
   <stringbundleset id="stringbundleset">
     <stringbundle id="tabcandy-strings" src="chrome://tabcandy/locale/tabcandy.properties"/>
   </stringbundleset>
+      
+  <menupopup id="menu_viewPopup">  
+    <command id="tabcandy_Open" oncommand="gBrowser.openTabCandy();"/>
+    <!-- TODO: Why doesn't Command-E actually cause this to happen even though the menu item selects? -->
+    <key id="tabcandy_manageTabs" key="E" modifiers="accel" command="tabcandy_Open"/>
+    <menuitem
+      label="Tabs"
+      key="tabcandy_manageTabs"
+      command="tabcandy_Open"/>  
+  </menupopup>  
 </overlay>
