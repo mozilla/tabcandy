@@ -86,6 +86,8 @@ if( context.location.href.match(/\.xul/) ){
     tooltip: "Opens a visual tab interface. You can also use Command+1.",
     onclick: doTabCandy
   });
+  
+  win.gBrowser.openTabCandy = doTabCandy;
 }
 else {
 
