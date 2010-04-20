@@ -47,7 +47,7 @@
 	<key>ColumnSpacing</key>
 	<real>36</real>
 	<key>CreationDate</key>
-	<string>2010-03-17 15:06:48 -0700</string>
+	<string>2010-03-17 18:06:48 -0400</string>
 	<key>Creator</key>
 	<string>Aza Raskin</string>
 	<key>DisplayScale</key>
@@ -303,7 +303,7 @@
 				<string>{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
 {\fonttbl\f0\fnil\fcharset0 DroidSans;}
 {\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
 \f0\fs28 \cf0 An Example of Icon and List Views}</string>
 				<key>VerticalPad</key>
@@ -18705,7 +18705,7 @@ An optimum space-efficient layout should be used.}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2010-04-14 17:11:16 -0700</string>
+	<string>2010-04-14 20:11:16 -0400</string>
 	<key>Modifier</key>
 	<string>Aza Raskin</string>
 	<key>NotesVisible</key>
@@ -18731,7 +18731,7 @@ An optimum space-efficient layout should be used.}</string>
 		<key>NSPaperName</key>
 		<array>
 			<string>string</string>
-			<string>0837E090-642B-451B-B353-DB37E2481DFA</string>
+			<string>0D09B4C8-CB1B-4E6A-9B6B-974FDC4396A7</string>
 		</array>
 		<key>NSPaperSize</key>
 		<array>
@@ -18795,7 +18795,7 @@ An optimum space-efficient layout should be used.}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 1991}, {1131, 605}}</string>
+		<string>{{2026, 208}, {1131, 605}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
