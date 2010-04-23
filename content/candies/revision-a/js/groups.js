@@ -180,6 +180,17 @@ window.Group.prototype = $.extend(new Item(), new Subscribable(), {
   defaultName: "name this group...",
   
   // ----------  
+  getStorageData: function() {
+    var data = {
+      bounds: this.getBounds(), 
+      locked: this.locked, 
+      title: this.getTitle()
+    };
+    
+    return data;
+  },
+  
+  // ----------
   getTitle: function() {
     var value = (this.$title ? this.$title.val() : '');
     return (value == this.defaultName ? '' : value);
@@ -624,6 +635,16 @@ window.Groups = {
     }, 1000);
   },
 
+  // ----------
+  getStorageData: function() {
+    var data = {groups: []};
+    $.each(this.groups, function(index, group) {
+      data.groups.push(group.getStorageData());
+    });
+    
+    return data;
+  },
+  
   // ----------  
   register: function(group) {
     Utils.assert('only register once per group', $.inArray(group, this.groups) == -1);
