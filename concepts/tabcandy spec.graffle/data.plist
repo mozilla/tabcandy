@@ -161,6 +161,61 @@
 	<array>
 		<dict>
 			<key>Bounds</key>
+			<string>{{85, 2678}, {284, 48}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FitText</key>
+			<string>Vertical</string>
+			<key>Flow</key>
+			<string>Resize</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>DroidSans</string>
+				<key>Size</key>
+				<real>14</real>
+			</dict>
+			<key>ID</key>
+			<integer>46097</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Align</key>
+				<integer>0</integer>
+				<key>Pad</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
+{\fonttbl\f0\fnil\fcharset0 DroidSans;}
+{\colortbl;\red255\green255\blue255;\red73\green73\blue73;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+
+\f0\fs22 \cf2 There should be a global new-page button. It appears in the "New Tab" group (i.e., where a new tab would appear if opened as an orphan).}</string>
+				<key>VerticalPad</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
 			<string>{{2519.68, 1123}, {70.5292, 67.98}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
@@ -1833,7 +1888,7 @@ The new page button cannot be dragged around, and under resize either: (a) goes 
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{800, 2004}, {176, 19}}</string>
+			<string>{{800, 2004}, {190, 19}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1881,7 +1936,7 @@ The new page button cannot be dragged around, and under resize either: (a) goes 
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
-\f0\fs28 \cf0 When TabCandy is not open}</string>
+\f0\fs28 \cf0 When TabCandy is not in front}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
@@ -19051,7 +19106,7 @@ An optimum space-efficient layout should be used.}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2010-04-23 18:00:56 -0400</string>
+	<string>2010-04-26 01:46:11 -0400</string>
 	<key>Modifier</key>
 	<string>Aza Raskin</string>
 	<key>NotesVisible</key>
@@ -19127,7 +19182,7 @@ An optimum space-efficient layout should be used.}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{110, 4}, {1280, 774}}</string>
+		<string>{{0, 4}, {1280, 774}}</string>
 		<key>ListView</key>
 		<false/>
 		<key>OutlineWidth</key>
@@ -19137,11 +19192,11 @@ An optimum space-efficient layout should be used.}</string>
 		<key>ShowRuler</key>
 		<true/>
 		<key>Sidebar</key>
-		<true/>
+		<false/>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{2153, 1}, {1131, 605}}</string>
+		<string>{{0, 1908}, {1252, 605}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
