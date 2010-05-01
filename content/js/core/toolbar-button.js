@@ -3,7 +3,7 @@
 var windowMediator = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator);
 var win = windowMediator.getMostRecentWindow("navigator:browser");
 var navBar = win.document.getElementById("nav-bar");
-var orignalButtonImage = "chrome://tabcandy/content/img/shared/candybutton.png";
+var originalButtonImage = "chrome://tabcandy/content/img/shared/candybutton.png";
 
 
 function openAndReuseOneTabPerURL(url) {
@@ -81,7 +81,7 @@ function doTabCandy(){
 if( context.location.href.match(/\.xul/) ){
   createButton({
     label:   "TabCandy",
-    image:   orignalButtonImage,
+    image:   originalButtonImage,
     id:      "tabcandy-button",
     tooltip: "Opens a visual tab interface. You can also use Command+1.",
     onclick: doTabCandy
@@ -106,9 +106,12 @@ else {
     },
 
     _render: function(){
+      // This routine throws exceptions, and it doesn't seem to do anything anyway,
+      // so I'm commenting it out --Ian
+/*
       var body = context.document.body;
       var img = new Image();
-      img.src = orignalButtonImage;
+      img.src = originalButtonImage;
       var canvas = context.document.createElement("canvas");
       body.appendChild(canvas);
       var ctx = canvas.getContext("2d");
@@ -132,6 +135,7 @@ else {
       var dataURL = canvas.toDataURL();    
       this.button.image = dataURL;
       body.removeChild(canvas);
+*/
 
     },
 
