@@ -4,9 +4,10 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>tabcandy@aza.raskin</em:id>
     <em:name>TabCandy</em:name>
-    <em:version>0.1</em:version>
+    <em:version>0.2</em:version>
     <em:creator>Aza Raskin</em:creator>
-    <em:description>Tab Candy</em:description>
+    <em:homepageURL>http://azarask.in</em:homepageURL>    
+    <em:description>The tab manager you've always wanted. Now in delicious candy form.</em:description>
     <em:iconURL>chrome://tabcandy/content/tabcandy.png</em:iconURL>
     <em:targetApplication>
       <Description>
@@ -15,5 +16,7 @@
         <em:maxVersion>3.*</em:maxVersion>
       </Description>
     </em:targetApplication>
+  <em:updateURL>https://hg.mozilla.org/labs/tabcandy/raw-file/tip/tabcandy.xpi</em:updateURL>
+    
   </Description>
 </RDF>
