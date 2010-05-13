@@ -9,7 +9,7 @@ var indexSectionsWithContent = {
       "E": false,
       "F": true,
       "G": true,
-      "H": false,
+      "H": true,
       "I": true,
       "J": true,
       "K": false,
@@ -27,19 +27,19 @@ var indexSectionsWithContent = {
       "W": false,
       "X": false,
       "Y": false,
-      "Z": false
+      "Z": true
       },
    "Variables": {
       "Symbols": true,
       "Numbers": false,
-      "A": false,
+      "A": true,
       "B": true,
       "C": true,
       "D": true,
       "E": false,
       "F": false,
       "G": false,
-      "H": false,
+      "H": true,
       "I": true,
       "J": false,
       "K": false,
@@ -87,7 +87,7 @@ var indexSectionsWithContent = {
       "W": false,
       "X": false,
       "Y": false,
-      "Z": false
+      "Z": true
       },
    "Classes": {
       "Symbols": false,
