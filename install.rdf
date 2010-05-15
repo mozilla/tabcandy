@@ -4,7 +4,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>tabcandy@aza.raskin</em:id>
     <em:name>TabCandy</em:name>
-    <em:version>0.2.2</em:version>
+    <em:version>0.2.3</em:version>
     <em:creator>Aza Raskin</em:creator>
     <em:contributor>Ian Gillman</em:contributor>
     <em:homepageURL>http://azarask.in</em:homepageURL>    
