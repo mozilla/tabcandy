@@ -16,9 +16,9 @@
      <em:version>0.2</em:version> <!-- This is the version number of the add-on -->
      <em:targetApplication>
        <RDF:Description>
-         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
          <em:minVersion>1.5</em:minVersion>
-         <em:maxVersion>2.0.0.*</em:maxVersion>
+         <em:maxVersion>3.*</em:maxVersion>
 <em:updateLink>http://hg.mozilla.org/labs/tabcandy/raw-file/77999f4a0232/tabcandy.xpi</em:updateLink>
 
        </RDF:Description>
@@ -33,11 +33,10 @@
       <em:version>0.2.2</em:version> <!-- This is the version number of the add-on -->
       <em:targetApplication>
         <RDF:Description>
-          <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+          <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
           <em:minVersion>1.5</em:minVersion>
-          <em:maxVersion>2.0.0.*</em:maxVersion>
+          <em:maxVersion>3.*</em:maxVersion>
  <em:updateLink>http://hg.mozilla.org/labs/tabcandy/raw-file/62725d040351/tabcandy.xpi</em:updateLink>
-
         </RDF:Description>
       </em:targetApplication>
     </RDF:Description>
@@ -49,10 +48,10 @@
        <em:version>0.2.3</em:version> <!-- This is the version number of the add-on -->
        <em:targetApplication>
          <RDF:Description>
-           <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+           <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
            <em:minVersion>1.5</em:minVersion>
-           <em:maxVersion>2.0.0.*</em:maxVersion>
-  <em:updateLink>http://hg.mozilla.org/labs/tabcandy/raw-file/tip/tabcandy.xpi</em:updateLink>
+           <em:maxVersion>3.*</em:maxVersion>
+ <em:updateLink>http://hg.mozilla.org/labs/tabcandy/raw-file/tip/tabcandy.xpi</em:updateLink>
 
          </RDF:Description>
        </em:targetApplication>
