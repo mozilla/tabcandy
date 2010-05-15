@@ -12,6 +12,8 @@
         <!-- The resource attribute points to an RDF:Description entry below with
              a matching about attribute. The actual uri can be whatever you like -->
         <RDF:li resource="urn:mozilla:extension:tabcandy@aza.raskin:0.2"/>
+        <RDF:li resource="urn:mozilla:extension:tabcandy@aza.raskin:0.2.1"/>
+
       </RDF:Seq>
     </em:updates>
   </RDF:Description>
@@ -19,7 +21,6 @@
   <!-- This represents the same Description within the li from the previous example -->
   <RDF:Description about="urn:mozilla:extension:tabcandy@aza.raskin:0.2">
     <em:version>0.2</em:version>
-
     <em:targetApplication>
       <RDF:Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
@@ -29,7 +30,19 @@
 <em:updateLink>https://hg.mozilla.org/labs/tabcandy/raw-file/tip/tabcandy.xpi</em:updateLink>
       </RDF:Description>
     </em:targetApplication>
-
   </RDF:Description>
+  
+    <RDF:Description about="urn:mozilla:extension:tabcandy@aza.raskin:0.2.1">
+      <em:version>0.2.1</em:version>
+      <em:targetApplication>
+        <RDF:Description>
+          <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
+          <em:minVersion>1.5</em:minVersion>
+          <em:maxVersion>3.*</em:maxVersion>
+
+  <em:updateLink>https://hg.mozilla.org/labs/tabcandy/raw-file/tip/tabcandy.xpi</em:updateLink>
+        </RDF:Description>
+      </em:targetApplication>
+    </RDF:Description>  
 
 </RDF:RDF>

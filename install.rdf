@@ -4,7 +4,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>tabcandy@aza.raskin</em:id>
     <em:name>TabCandy</em:name>
-    <em:version>0.2</em:version>
+    <em:version>0.2.1</em:version>
     <em:creator>Aza Raskin</em:creator>
     <em:contributor>Ian Gillman</em:contributor>
     <em:homepageURL>http://azarask.in</em:homepageURL>    
@@ -17,7 +17,7 @@
         <em:maxVersion>3.*</em:maxVersion>
       </Description>
     </em:targetApplication>
-  <em:updateURL>http://hg.mozilla.org/labs/tabcandy/raw-file/tip/update.rdf</em:updateURL>
+  <em:updateURL>https://hg.mozilla.org/labs/tabcandy/raw-file/tip/update.rdf</em:updateURL>
     
   </Description>
 </RDF>
