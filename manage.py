@@ -184,7 +184,10 @@ def xpi(options):
             # Excludes by directory and extension
             # This first part is an ugly hack >.<
             if "concepts" in dirpath.split(os.path.sep) or \
-               "Presos" in dirpath.split(os.path.sep):
+               "Presos" in dirpath.split(os.path.sep) or \
+               ".hg" in dirpath.split(os.path.sep) or \
+               ".hgignore" in dirpath.split(os.path.sep) or \
+               ".DS_Store" in dirpath.split(os.path.sep):
               continue
             if os.path.splitext(filename)[1] in [".key", ".xpi"]:
               continue
