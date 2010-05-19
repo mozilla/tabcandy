@@ -1,0 +1,274 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(../images/General/background.jpg) center repeat-y;
+	font-family: Helvetica;
+	text-shadow: 0px 1px 0.5px #fff;
+}
+
+a img {
+	border: none;
+}
+
+p a {
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #CCC;
+}
+
+p a:hover{
+  color :#800;
+}
+
+#container {
+	margin: 0 auto;
+	width: 960px;
+}
+
+.spaced{
+  margin-top:22px;
+}
+
+.linked{
+  color: black !important;
+  text-decoration: underline !important;
+}
+
+
+/* === Dashboard === */
+
+
+.group .peep{ font-size: 13px; margin-top: 6px; margin-bottom: 2px;}
+.group .bugs{ margin-left: 4px;}
+.buglist{ margin-top: 6px;}
+iframe{ width: 355px; height: 280px; border:1px solid #d5d5d5; -moz-box-shadow: 0px 1px 0px white; overflow:hidden; padding-left:5px; padding-top:10px;}
+
+/* === Sidebar Section === */
+
+#sidebar {
+	margin-top: 22px;
+	float: left;
+	overflow: hidden;
+	width: 272px;
+	text-shadow: none;
+}
+
+#sidebar #top {
+	position: fixed;
+}
+
+	/* === Logo Section === */
+	#sidebar img {
+		padding: 5px 10px;
+	}
+	
+	#sidebar p#slogan {
+		font-size: 13.9px;
+		margin-left: 16px;
+		margin-top: -3px;
+		text-transform: uppercase;
+		text-align: left;
+		width: 246px;
+		color: #b9b9b9;
+	}
+	/* === End Logo Section === */
+
+	/* === Menu Section === */
+	#sidebar ul.menu {
+		margin-top: 50px;
+		display: block;
+	}
+	
+	#sidebar ul.menu li {
+		list-style: none;
+		color: #3e3e3e;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 9px 0px 9px 20px;
+		margin-bottom: 1px;
+		width: 228px;
+		margin-left: 16px;
+		cursor: pointer;
+	}
+	
+	#sidebar ul.menu li {
+		color: #3e3e3e;
+	}
+	
+	#sidebar ul.menu li.active {
+		background: #3e3e3e !important;
+		color: #f0f0f0;
+	}
+
+
+	/* === Footer Section === */
+	
+	#footer {
+		position: fixed;
+		bottom: 10px;
+	}
+	
+	#footer p {
+		color: #cbcaca;
+		font-size: 11px;
+	}
+	
+	/* === End Footer Section === */
+	
+/* === End Sidebar Section === */
+
+/* === Content Section === */
+
+#content {
+	float: left;
+	width: 688px;
+}
+
+	/* === Panel header Section === */
+	
+	.panel_header {
+		height: 70px;
+		background: #f0f0f0;
+		border-top: 1px solid #d5d5d5;
+		border-bottom: 1px solid #d5d5d5;
+		border-right: 1px solid #d5d5d5;
+		padding-top: 90px;
+		overflow: hidden;
+	}
+	
+	/* === End Panel header Section === */
+
+.panel {
+	margin: 60px 60px 200px 60px;
+	overflow: hidden;
+}
+
+.panel img.whatwedo {
+	margin-bottom: 30px;
+}
+
+.left {
+	float: left;
+	width: 265px;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.right {
+	float: right;
+	width: 265px;
+	overflow: hidden;
+}
+
+.wide {
+	clear: both;
+	width: 588px;
+	margin-bottom: 40px;
+}
+
+.panel .wide h3 {
+	float: none;
+}
+
+.panel ul li {
+	list-style: none;
+	font-size: 10px;
+}
+
+ul.todo li {
+  list-style: decimal outside !important;
+	font-size: 12px;
+	width: 570px;
+}
+
+
+
+.panel ul a{
+  color: black;
+  text-decoration: none;
+}
+
+.panel ul li {
+  margin-bottom: 5px;
+}
+
+
+
+h3.title {
+	margin-bottom: 10px;
+	font-family: Futura, Helvetica, sans-serif;
+	color: #303232;
+	float: left;
+	text-transform: uppercase;
+}
+
+img.pretty {
+	padding: 14px;
+	background: #f0f0f0;
+	border: 1px solid #cecece;
+	margin-bottom: 10px;
+	max-width: 535px;
+}
+
+.button {
+	padding: 5px;
+	color: black;
+	background: #f0f0f0;
+	border: 1px solid #cecece;
+	margin-bottom: 10px;
+	width: 130px;
+	text-align: center;
+	//-moz-box-shadow: 0px 1px 0px white;
+  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+  text-shadow: none;
+  font-variant: small-caps;
+  cursor: pointer;
+  margin-left: 1px;
+}
+
+.button:hover{
+  -moz-box-shadow: 2px 2px 5px rgba(0,0,0,.1);
+  position: relative;
+  top: -1px;
+  left: -1px;
+}
+
+.left p, .right p, .wide p {
+	font-size: 16px;
+	line-height: 22px;
+	margin-bottom: 15px;
+	color: #595959;
+	width: 98%;
+}
+
+.left div.more, .right div.more {
+	float: left;
+	font-size: 11px;
+	padding: 0px 7px;
+	background: #f0f0f0;
+	border: 1px solid #d8d9d9;
+	color: #3e3e3e;
+	text-decoration: none;
+	font-weight: bold;
+	width: 249px;
+	height: 32px;
+	line-height:32px;
+}
+
+.left div.more li, .right div.more li {
+	list-style: none;
+	display: inline;
+	float: left;
+	margin-right: 4px;
+	float: left;
+	margin-top: 7px;
+}
+
+
+/* === End Content Section === */

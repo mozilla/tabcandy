@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<!-- Page Title -->
+		<title>TabCandy Dashboard</title>
+		
+		<!-- Import CSS files -->
+		<link rel="stylesheet" href="css/stylesheet.css" />
+		<link rel="stylesheet" href="css/jquery.fancybox-1.3.1.css" />
+		
+		<!-- Begin javascript -->
+		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox-1.3.1.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script>
+    google.load("feeds", "1");
+    </script>
+								
+		<!-- Execute Javascript -->
+		<script type="text/javascript">
+    
+			$(document).ready(function() { 				
+				// ScrollTo animation	
+				$("div#sidebar ul.menu li").click(function(){
+					$("div#sidebar ul.menu li").removeClass("active");
+					$(this).addClass("active");
+					var href = $(this).attr('class').replace("active","");
+					var link = "div#" + href;
+					var position = $(link).position();
+					$.scrollTo({ top: position.top, left: 0}, 400, function(){
+					  location.assign("#"+href);					  
+					});
+				});
+								
+				// Fancybox settings
+				$("a.fancybox").fancybox({
+					'titlePosition'	: 'over'
+				});
+				
+				$("a[rel=Envato]").fancybox({
+					'type' : 'iframe',
+					'height' : '90%',
+					'width' : '90%',
+					'autoScale' : false,
+					'titlePosition' : 'over'
+				});
+				
+			});
+		</script>
+		<!-- End javascript -->
+
+
+				
+	</head>
+	<body>
+		
+		<div id="container">
+		
+			<!-- Sidebar on the left -->
+			<div id="sidebar">
+
+				<div id="top">
+					<!-- Logo -->
+					<img src="images/tabcandy.jpg" alt="Company" />
+					<!-- Slogan -->
+					<p id="slogan">Making browsing delicious.</p>
+					
+					<ul class="menu">
+						<li class="home active" >About.</li>
+						<li class="dashboard">Dashboard.</li>
+						<li class="todo">TODO.</li>
+					</ul>
+				</div> <!-- End sidebar (Top) -->
+				
+				<div id="footer">
+					<p>Saving you from tabs with tabs. It's TabCandy FTW.</p>
+
+				</div> <!-- End footer -->
+				
+			</div> <!-- end sidebar -->
+			
+			<div id="content">
+			
+				<!-- ======================= Home ======================= -->
+				
+				
+				<div class="panel" id="home">
+
+					<div class="left">
+						<h3 class="title">Get the Alpha</h3><br clear="all">
+						<p><a href="http://bit.ly/aPAO1V">Download it now</a>. It works in Firefox 3.6 and Minefield. The alpha keeps itself up-to-date as we roll out new versions. Please do not
+						  blog or tweet.</p>
+  					
+            
+						<h3 class="title spaced">Report a Bug</h3><br clear="all">
+  					<p>If you find one, <a href='https://bugzilla.mozilla.org/enter_bug.cgi?alias=&assigned_to=nobody%40mozilla.org&blocked=&bug_file_loc=http%3A%2F%2F&bug_severity=normal&bug_status=NEW&comment=&component=TabCandy&contenttypeentry=&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&data=&dependson=&description=&flag_type-325=X&flag_type-37=X&flag_type-4=X&flag_type-607=X&form_name=enter_bug&keywords=&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Mac%20OS%20X&priority=--&product=Mozilla%20Labs&qa_contact=tabcandy%40mozilla-labs.bugs&rep_platform=x86&short_desc=&status_whiteboard=&target_milestone=--&version=unspecified'>report it</a>.</p>
+  					
+						<h3 class="title spaced">Feedback and Ideas</h3><br clear="all"> 					
+  					<p>Submit an idea, criticism, or piece of feedback with <a href="http://feedback.mozillalabs.com/forums/56804-tabcandy">UserVoice</a></p>
+						
+  					<h3 class="title spaced">The Code</h3><br clear="all">
+  					<p>The lauded <a href="https://hg.mozilla.org/labs/tabcandy">HG repository</a>.</p>
+						
+						
+					</div>
+					
+					<div class="right">
+						<h3 class="title">Screencast</h3>
+						<a href="http://www.azarask.in/projects/tabcandy/tabcandy-demo.mov"><img class="pretty" src="images/demo.png" /></a>
+						<p>Note it is a quick-n-dirty introductory screencast. Nothing final here.</p>
+					</div>
+					
+					
+					<div class="wide">
+						<h3 class="title">About</h3>
+						<p>One of the slides in the recently presented <a href="https://wiki.mozilla.org/Firefox/4">Firefox 4</a> <a href="http://vimeo.com/11699846">roadmap</a> had a mainly unexplained grey bullet point on TabCandy.</p>
+						
+						<img class="pretty" src="http://img.skitch.com/20100519-cgn8exxwp39i1p2cbb9cjuujm2.png"/>
+
+            <p>TabCandy is a feature we've been exploring for Firefox on how to handle the modern web workflow by being able to name and group tabs into work spaces. Think Exposé meets Spaces done right. It's an attempt to solve many of the problems we've seen emerge over the last number of years around multitasking and information proliferation. The reason why TabCandy was listed in grey in the product plan is that there are still some some implementation challenges to be solved and a couple user experience questions to be answered for us to be able to commit to TabCandy being in Firefox 4.</p>
+						
+					</div>
+					
+				</div>
+				
+				
+				<!-- ======================= Dashboard ======================= -->
+				
+				<div class="panel_header" id="dashboard">
+					<h1>Dashboard.</h1>
+				</div>
+				
+				<div class="panel">
+					
+					<div class="left">
+					 <h3>Assigned Bugs</h3>
+					 <div id="assigned" class="buglist"></div>
+					 
+					 
+					</div>
+					<div class="right">
+					  <h3>Recently Fixed</h3>
+					  <div id="fixed" class="buglist"></div>
+
+            <br/><br/>
+					  <h3>Recent Activity</h3>
+					  <div id="recent" class="buglist"></div>
+					  					  
+					</div>
+					
+					<div class="wide">
+					  <h3 class="spaced">UserVoice Feedback</h3>
+						<iframe src="http://mozillalabs.uservoice.com/forums/56804/widgets/popin.html"></iframe>
+					</div>
+
+					
+				</div>
+				
+				
+				<!-- ======================= Dashboard ======================= -->
+				
+				<div class="panel_header" id="todo">
+					<h1>TODO.</h1>
+				</div>
+				
+				<div class="panel">
+					
+					<div class="wide">
+						<h3 class="spaced">P1</h3>
+						<div id="P1s"></div>
+
+						<h3 class="spaced">P2</h3>
+						<div id="P2s"></div>
+
+						<h3 class="spaced">P3</h3>
+						<div id="P3s"></div>
+
+					</div>
+
+					
+				</div>
+				
+				
+				
+				<!-- ======================= END ======================= -->
+				
+								
+
+
+			</div> <!-- End content -->
+			
+		</div> <!-- end container -->
+	
+	<script src="js/dashboard.js"></script>
+	</body>
+
+</html>
