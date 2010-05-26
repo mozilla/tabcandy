@@ -236,7 +236,7 @@ Group.prototype = {
 
   // ----------  
   add: function($el, dropPos){
-    Utils.assert('add expects jQuery objects', Utils.isJQuery($el));
+/*     Utils.assert('add expects jQuery objects', Utils.isJQuery($el)); */
     var el = $el.get(0);
     
     if( typeof(dropPos) == "undefined" ) dropPos = {top:window.innerWidth, left:window.innerHeight};
