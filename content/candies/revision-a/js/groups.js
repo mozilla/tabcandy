@@ -956,6 +956,7 @@ window.Group.prototype = $.extend(new Item(), new Subscribable(), {
     if(!this.locked.bounds) {
       $(container).draggable({
         scroll: false,
+        containment: '#bg',
         cancel: '.close, .name',
         start: function(e, ui){
           drag.info = new DragInfo(this, e);
@@ -1294,6 +1295,7 @@ window.Groups = {
   // ----------  
   dragOptions: {
     scroll: false,
+    containment: '#bg',
     cancel: '.close',
     start: function(e, ui) {
       drag.info = new DragInfo(this, e);
