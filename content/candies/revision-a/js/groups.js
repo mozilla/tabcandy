@@ -1465,6 +1465,19 @@ window.Groups = {
   },
   
   // ----------
+  getGroupWithTitle: function(title) {
+    var result = null;
+    iQ.each(this.groups, function(index, group) {
+      if(group.getTitle() == title) {
+        result = group;
+        return false;
+      }
+    });
+    
+    return result;
+  }, 
+ 
+  // ----------
   getNewTabGroup: function() {
     var groupTitle = 'New Tabs';
     var array = jQuery.grep(this.groups, function(group) {
@@ -1531,23 +1544,29 @@ window.Groups = {
   
   // ----------  
   arrange: function() {
-    var count = this.groups.length;
+    var bounds = Items.getPageBounds();
+    var count = this.groups.length - 1;
     var columns = Math.ceil(Math.sqrt(count));
     var rows = ((columns * columns) - count >= columns ? columns - 1 : columns); 
     var padding = 12;
-    var startX = padding;
-    var startY = Page.startY;
-    var totalWidth = window.innerWidth - startX;
-    var totalHeight = window.innerHeight - startY;
+    var startX = bounds.left + padding;
+    var startY = bounds.top + padding;
+    var totalWidth = bounds.width - padding;
+    var totalHeight = bounds.height - padding;
     var box = new Rect(startX, startY, 
         (totalWidth / columns) - padding,
         (totalHeight / rows) - padding);
     
+    var i = 0;
     $.each(this.groups, function(index, group) {
+      if(group.locked.bounds)
+        return; 
+        
       group.setBounds(box, true);
       
       box.left += box.width + padding;
-      if(index % columns == columns - 1) {
+      i++;
+      if(i % columns == 0) {
         box.left = startX;
         box.top += box.height + padding;
       }
