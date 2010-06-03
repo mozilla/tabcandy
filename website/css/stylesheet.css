@@ -176,13 +176,13 @@ iframe{ width: 355px; height: 360px; border:1px solid #d5d5d5; -moz-box-shadow: 
 	float: none;
 }
 
-ul{
+.panel ul{
   padding-left: 10px;
   font-size: 12px;
   padding-top: 10px;
 }
 
-li{
+.panel li{
   list-style: none;
   padding-bottom: 5px;
   max-width: 550px;
