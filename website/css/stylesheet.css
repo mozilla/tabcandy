@@ -45,7 +45,7 @@ p a:hover{
 .group .peep{ font-size: 13px; margin-top: 6px; margin-bottom: 2px;}
 .group .bugs{ margin-left: 4px;}
 .buglist{ margin-top: 6px;}
-iframe{ width: 355px; height: 280px; border:1px solid #d5d5d5; -moz-box-shadow: 0px 1px 0px white; overflow:hidden; padding-left:5px; padding-top:10px;}
+iframe{ width: 355px; height: 360px; border:1px solid #d5d5d5; -moz-box-shadow: 0px 1px 0px white; overflow:hidden; padding-left:5px; padding-top:10px;}
 
 /* === Sidebar Section === */
 
