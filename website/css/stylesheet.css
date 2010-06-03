@@ -45,7 +45,7 @@ p a:hover{
 .group .peep{ font-size: 13px; margin-top: 6px; margin-bottom: 2px;}
 .group .bugs{ margin-left: 4px;}
 .buglist{ margin-top: 6px;}
-iframe{ width: 355px; height: 280px; border:1px solid #d5d5d5; -moz-box-shadow: 0px 1px 0px white; overflow:hidden; padding-left:5px; padding-top:10px;}
+iframe{ width: 355px; height: 360px; border:1px solid #d5d5d5; -moz-box-shadow: 0px 1px 0px white; overflow:hidden; padding-left:5px; padding-top:10px;}
 
 /* === Sidebar Section === */
 
@@ -176,29 +176,26 @@ iframe{ width: 355px; height: 280px; border:1px solid #d5d5d5; -moz-box-shadow: 
 	float: none;
 }
 
-.panel ul li {
-	list-style: none;
-	font-size: 10px;
+ul{
+  padding-left: 10px;
+  font-size: 12px;
+  padding-top: 10px;
 }
 
-ul.todo li {
-  list-style: decimal outside !important;
-	font-size: 12px;
-	width: 570px;
+li{
+  list-style: none;
+  padding-bottom: 5px;
+  max-width: 550px;
 }
-
-
 
 .panel ul a{
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-.panel ul li {
-  margin-bottom: 5px;
+.buglist a{
+  text-decoration: none !important;
 }
-
-
 
 h3.title {
 	margin-bottom: 10px;

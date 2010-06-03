@@ -15,6 +15,7 @@
 		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 		<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
 		<script type="text/javascript" src="js/jquery.fancybox-1.3.1.js"></script>
+		<script type="text/javascript" src="js/showdown.js"></script>		
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script>
     google.load("feeds", "1");
@@ -71,7 +72,8 @@
 					
 					<ul class="menu">
 						<li class="home active" >About.</li>
-						<li class="dashboard">Dashboard.</li>
+						<li class="code">Code Intro.</li>						
+						<li class="dashboard">Dashboard.</li>						
 						<li class="todo">TODO.</li>
 					</ul>
 				</div> <!-- End sidebar (Top) -->
@@ -111,7 +113,7 @@
 					<div class="right">
 						<h3 class="title">Screencast</h3>
 						<a href="http://www.azarask.in/projects/tabcandy/tabcandy-demo.mov"><img class="pretty" src="images/demo.png" /></a>
-						<p>Note it is a quick-n-dirty introductory screencast. Nothing final here.</p>
+						<p>Note that this is a quick-n-dirty introductory screencast. Nothing final here; much has changed since this was recorded.</p>
 					</div>
 					
 					
@@ -127,6 +129,36 @@
 					
 				</div>
 				
+		
+				<!-- ======================= Dashboard ======================= -->
+				
+				<div class="panel_header" id="code">
+					<h1>Code Intro.</h1>
+				</div>
+				
+				<div class="panel">
+				  
+					<div class="wide">
+					 <h3>Getting Started</h3>
+					 <p> TabCandy itself is a webpage that runs in chrome space. It currently lives inside of a standard browser tab which we hide from the tabstrip (one of the things we know we will probably need to change). This page can be found in <code><a href="http://hg.mozilla.org/labs/tabcandy/file/tip/content/candies/revision-a/index.html">content/candies/revision-a/index.html</a></code>. All of the user interface code lives in <code><a href="http://hg.mozilla.org/labs/tabcandy/file/tip/content/candies/revision-a/js">revision-a/js</a></code> with <code><a href="http://hg.mozilla.org/labs/tabcandy/file/tip/content/candies/revision-a/js/ui.js">ui.js</a></code> being the most high-level.</p>
+
+           <p>There are a whole bunch of visualizations in <code><a href="http://hg.mozilla.org/labs/tabcandy/file/tip/content/candies">content/candies</a></code> but you can ignore all of them except <code><a href="http://hg.mozilla.org/labs/tabcandy/file/tip/content/candies/revision-a">revision-a</a></code>. We'll probably be removing all but <code>revision-a</code> for launch.</p>
+
+           <p>Most of the lower-level tab watching, utilities, and dark magic is done in <code><a href="http://hg.mozilla.org/labs/tabcandy/file/tip/content/js/core">content/js/core</a></code> with <code><a href="http://hg.mozilla.org/labs/tabcandy/file/tip/content/js/core/tabs.js">tabs.js</a></code> being the most low-level.</p>
+        </div>
+           
+			<div class="left">           
+         <h3>Documentation?!</h3>
+         <p>Yes! We have some. Get the <a href="http://hg.mozilla.org/labs/tabcandy/raw-file/tip/content/doc/files/revision-a/js/groups-js.html">code documentation here</a>.</p>
+      </div>
+         
+      <div class="right">
+         <h3>Unit Tests</h3>
+         <p>There aren't any. Yet.</p>		  
+			</div>
+
+					
+				</div>		
 				
 				<!-- ======================= Dashboard ======================= -->
 				
@@ -161,7 +193,7 @@
 				</div>
 				
 				
-				<!-- ======================= Dashboard ======================= -->
+				<!-- ======================= TODO ======================= -->
 				
 				<div class="panel_header" id="todo">
 					<h1>TODO.</h1>

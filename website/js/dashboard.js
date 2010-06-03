@@ -1,10 +1,11 @@
+// URL Handler
 if( location.hash ){
   $(".menu li").removeClass("active");
 	var nav = $("li."+location.hash.substr(1));
   nav.addClass("active");
 }
 
-
+// Linkifier
 (function($){
 
   var url1 = /(^|"|&lt;|\s)(www\..+?\..+?)(\s|&gt;|"|$)/g,
@@ -39,8 +40,37 @@ if( location.hash ){
 
 })(jQuery);
 
+// Bug Linker
+(function($){
+
+  var bugPattern = /bug:(\d+)/g;
+
+  $.fn.bugifier = function () {
+    return this.each(function () {
+      var childNodes = this.childNodes,
+          i = childNodes.length;
+      while(i--)
+      {
+        var n = childNodes[i];
+        if (n.nodeType == 3) {
+          var html = n.nodeValue;
+          if (/\S/.test(html))
+          {
+            html = html.replace(bugPattern, '<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=$1">Bug #$1</a>')
+            $(n).after(html).remove();
+          }
+        }
+        else if (n.nodeType == 1 && !/^(a|button|textarea)$/i.test(n.tagName)) {
+          arguments.callee.call(n);
+        }
+      };
+    });
+  };
+
+})(jQuery);
 
 
+// Bugs
 function render(el, entries){
   var ul = $("<ul class='bugs'>");
   for each( var entry in entries ){
@@ -89,36 +119,21 @@ setTimeout(function(){
   feed3.load(function(result) { render("#recent", result.feed.entries) });  
 }, 500); 
 
+
+// TODOs
+
+var markdown = new Showdown.converter();
+
 $("<script/>").attr("src","http://azarask.in/projects/tabcandy/todo.php").appendTo("body");
 
-function processItems(text){
-  items = text.match(/\*.*/g);
-  if( !items ) return [];
-  var newItems = [];
-  for(var i=0; i<items.length; i++){
-    if( items[i].length > 5 ){
-      newItems.push(items[i].substr(2));  
-    }
-  }
-  return newItems;
-}
-
-function renderTodo(el, items){
-  var ul = $("<ul class='todo'/>");
-  for each( var item in items){
-    $("<li/>").text(item).appendTo(ul);
-  }
-  $(el).append(ul);
-}
-
 function onTodoReady(data){
-  var P1s = processItems(data.match(/== P1 ==([\s\S]*?)==/m)[1]);
-  var P2s = processItems(data.match(/== P2 ==([\s\S]*?)==/m)[1]);
-  var P3s = processItems(data.match(/== P3 ==([\s\S]*?)==/m)[1]);
-    
-  renderTodo("#P1s", P1s);
-  renderTodo("#P2s", P2s);  
-  renderTodo("#P3s", P3s);
-  
-  $(".todo").linkify();
+  var P1s = markdown.makeHtml(data.match(/== P1 ==([\s\S]*?)==/m)[1]);
+  var P2s = markdown.makeHtml(data.match(/== P2 ==([\s\S]*?)==/m)[1]);
+  var P3s = markdown.makeHtml(data.match(/== P3 ==([\s\S]*?)==/m)[1]);
+  $("#P1s").html(P1s);
+  $("#P2s").html(P2s);
+  $("#P3s").html(P2s);
+
+  $(".panel").bugifier();
+  $(".panel").linkify();  
 }
