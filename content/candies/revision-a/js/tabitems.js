@@ -32,7 +32,7 @@ window.TabItem = function(container, tab) {
   });
 };
 
-window.TabItem.prototype = $.extend(new Item(), {
+window.TabItem.prototype = iQ.extend(new Item(), {
   // ----------  
   getStorageData: function() {
     return {
@@ -64,7 +64,7 @@ window.TabItem.prototype = $.extend(new Item(), {
   
   // ----------  
   _getSizeExtra: function() {
-    var $container = $(this.container);
+    var $container = iQ(this.container);
 
     var widthExtra = parseInt($container.css('padding-left')) 
         + parseInt($container.css('padding-right'));
@@ -102,11 +102,11 @@ window.TabItem.prototype = $.extend(new Item(), {
       Utils.trace('TabItem.setBounds: rect is not a real rectangle!', rect);
       return;
     }
-
-    var $container = $(this.container);
-    var $title = $('.tab-title', $container);
-    var $thumb = $('.thumb', $container);
-    var $close = $('.close', $container);
+    
+    var $container = iQ(this.container);
+    var $title = iQ('.tab-title', $container);
+    var $thumb = iQ('.thumb', $container);
+    var $close = iQ('.close', $container);
     var extra = this._getSizeExtra();
     var css = {};
     
@@ -133,7 +133,7 @@ window.TabItem.prototype = $.extend(new Item(), {
       css.height = rect.height - extra.y; 
     }
       
-    if($.isEmptyObject(css))
+    if(iQ.isEmptyObject(css))
       return;
       
     this.bounds.copy(rect);
@@ -142,22 +142,21 @@ window.TabItem.prototype = $.extend(new Item(), {
     // a random location (i.e., from [0,0]). Instead, just
     // have it appear where it should be.
     if(immediately || (!this._hasBeenDrawn) ) {
-      $container.stop(true, true);
+/*       $container.stop(true, true); */
       $container.css(css);
     } else {
       TabMirror.pausePainting();
-      $container.animate(css,{
-        complete: function() {TabMirror.resumePainting();},
-        duration: 350,
-        easing: "tabcandyBounce"
-      }).dequeue();
+      $container.animate(css, 'animate350', function() {
+        TabMirror.resumePainting();
+      }); // tabcandyBounce
+/*       }).dequeue(); */
     }
 
     if(css.fontSize && !this.inStack()) {
       if(css.fontSize < minFontSize )
-        $title.fadeOut().dequeue();
+        $title.fadeOut();//.dequeue();
       else
-        $title.fadeIn().dequeue();
+        $title.fadeIn();//.dequeue();
     }
 
     if(css.width) {
@@ -372,44 +371,48 @@ window.TabItems = {
       $("body").css("overflow", "hidden");
       
       function onZoomDone(){
-        UI.tabBar.show(false);              
-        TabMirror.resumePainting();
-        tab.focus();
-        $(tabEl).css({
-          top:   orig.pos.top,
-          left:  orig.pos.left,
-          width: orig.width,
-          height:orig.height,
-          })
-          .removeClass("front");  
-        Navbar.show();
-               
-        // If the tab is in a group set then set the active
-        // group to the tab's parent. 
-        if( self.getItemByTab(tabEl).parent ){
-          var gID = self.getItemByTab(tabEl).parent.id;
-          var group = Groups.group(gID);
-          Groups.setActiveGroup( group );
-          group.setActiveTab( tabEl );                 
-        }
-        else
-          Groups.setActiveGroup( null );
-      
-        $("body").css("overflow", overflow); 
+        try {
+          UI.tabBar.show(false);              
+          TabMirror.resumePainting();
+          tab.focus();
+          $(tabEl).css({
+            top:   orig.pos.top,
+            left:  orig.pos.left,
+            width: orig.width,
+            height:orig.height,
+            })
+            .removeClass("front");  
+          Navbar.show();
+                 
+          // If the tab is in a group set then set the active
+          // group to the tab's parent. 
+          if( self.getItemByTab(tabEl).parent ){
+            var gID = self.getItemByTab(tabEl).parent.id;
+            var group = Groups.group(gID);
+            Groups.setActiveGroup( group );
+            group.setActiveTab( tabEl );                 
+          }
+          else
+            Groups.setActiveGroup( null );
         
-        if(childHitResult.callback)
-          childHitResult.callback();             
+          $("body").css("overflow", overflow); 
+          
+          if(childHitResult.callback)
+            childHitResult.callback();             
+        } catch(e) {
+          Utils.log(e);
+        }
       }
 
       TabMirror.pausePainting();
-      $(tabEl)
+      iQ(tabEl)
         .addClass("front")
         .animate({
           top:    -10,
           left:   0,
           width:  orig.width*scale,
           height: orig.height*scale
-          }, 200, "easeInQuad", onZoomDone);
+          }, 'animate200', onZoomDone);//, "easeInQuad"
     }    
   },
 
