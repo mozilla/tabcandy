@@ -9,7 +9,7 @@
     <em:contributor>Ian Gilman</em:contributor>
     <em:homepageURL>http://azarask.in</em:homepageURL>    
     <em:description>The tab manager you've always wanted. Now in delicious candy form.</em:description>
-    <em:iconURL>chrome://tabcandy/content/tabcandy.png</em:iconURL>
+    <em:iconURL>chrome://tabcandy/content/img/core/tabcandy.png</em:iconURL>
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->

@@ -4,7 +4,7 @@
 var windowMediator = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator);
 var win = windowMediator.getMostRecentWindow("navigator:browser");
 var navBar = win.document.getElementById("nav-bar");
-var originalButtonImage = "chrome://tabcandy/content/img/shared/candybutton.png";
+var originalButtonImage = "chrome://tabcandy/content/img/core/candybutton.png";
 
 
 function openAndReuseOneTabPerURL(url) {
@@ -65,7 +65,7 @@ function createButton(options){
 }
 
 function doTabCandy(){
-  openAndReuseOneTabPerURL("chrome://tabcandy/content/candies/revision-a/index.html");
+  openAndReuseOneTabPerURL("chrome://tabcandy/content/index.html");
   win.gBrowser.moveTabToStart();
   win.gBrowser.selectedTab.style.display = "none";  
 }
