@@ -368,18 +368,24 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
   
   // ----------
+  // Function: getTitle
+  // Returns the title of this group as a string.
   getTitle: function() {
     var value = (this.$title ? this.$title.val() : '');
     return (value == this.defaultName ? '' : value);
   },
 
   // ----------  
+  // Function: setTitle
+  // Sets the title of this group with the given string
   setTitle: function(value) {
     this.$title.val(value); 
     this.save();
   },
 
   // ----------  
+  // Function: adjustTitleSize
+  // Used to adjust the width of the title box depending on group width and title size.
   adjustTitleSize: function() {
     Utils.assert('bounds needs to have been set', this.bounds);
     var w = Math.min(this.bounds.width - 35, Math.max(150, this.getTitle().length * 6));
@@ -389,6 +395,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
   
   // ----------  
+  // Function: _getBoundingBox
+  // Given an array of DOM elements, returns a <Rect> with the union of their locations.
   _getBoundingBox: function(els) {
     var el;
     var boundingBox = {
@@ -399,10 +407,12 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
     };
     boundingBox.height = boundingBox.bottom - boundingBox.top;
     boundingBox.width  = boundingBox.right - boundingBox.left;
-    return boundingBox;
+    return new Rect(boundingBox);
   },
   
   // ----------  
+  // Function: getContentBounds
+  // Returns a <Rect> for the group's content area (which doesn't include the title, etc). 
   getContentBounds: function() {
     var box = this.getBounds();
     var titleHeight = this.$titlebar.height();
@@ -419,6 +429,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
   
   // ----------  
+  // Function: reloadBounds
+  // Sets the bounds based on the location of the group's container.
   reloadBounds: function() {
     var bb = iQ(this.container).bounds();
     
@@ -429,6 +441,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
   
   // ----------  
+  // Function: setBounds
+  // Sets the bounds with the given <Rect>, animating unless "immediately" is false.
   setBounds: function(rect, immediately) {
     if(!isRect(rect)) {
       Utils.trace('Group.setBounds: rect is not a real rectangle!', rect);
@@ -521,6 +535,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
     
   // ----------
+  // Function: setZ
+  // Set the Z order for the group's container, as well as its children. 
   setZ: function(value) {
     iQ(this.container).css({zIndex: value});
 
@@ -544,6 +560,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
     
   // ----------
+  // Function: close
+  // Closes the group, removing (but not closing) all of its children.
   close: function() {
     this.removeAll();
     this._sendOnClose();
@@ -558,6 +576,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
   
   // ----------  
+  // Function: closeAll
+  // Closes the group and all of its children.
   closeAll: function() {
     var self = this;
     if(this._children.length) {
@@ -741,6 +761,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
   
   // ----------
+  // Function: removeAll
+  // Removes all of the group's children.
   removeAll: function() {
     var self = this;
     var toRemove = iQ.merge([], this._children);
@@ -750,6 +772,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
     
   // ----------  
+  // Function: setNewTabButtonBounds
+  // Used for positioning the "new tab" button in the "new tabs" group.
   setNewTabButtonBounds: function(box, immediately) {
     var css = {
       left: box.left,
@@ -769,6 +793,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
   
   // ----------  
+  // Function: shouldStack
+  // Returns true if the group, given "count", should stack (instead of grid). 
   shouldStack: function(count) {
     if(count <= 1)
       return false;
@@ -784,6 +810,11 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
 
   // ----------  
+  // Function: arrange
+  // Lays out all of the children. 
+  // 
+  // Parameters: 
+  //   options - passed to <Items.arrange> or <_stackArrange>
   arrange: function(options) {
     if(this.expanded) {
       this.topChild = null;
@@ -845,6 +876,15 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
   
   // ----------
+  // Function: _stackArrange
+  // Arranges the children in a stack. 
+  // 
+  // Parameters: 
+  //   bb - <Rect> to arrange within
+  //   options - see below
+  //
+  // Possible "options" properties: 
+  //   animate - whether to animate; default: true.
   _stackArrange: function(bb, options) { 
     var animate;
     if(!options || typeof(options.animate) == 'undefined') 
@@ -913,6 +953,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
 
   // ----------
+  // Function: _randRotate
+  // Random rotation generator for <_stackArrange>
   _randRotate: function(spread, index){
     if( index >= this._stackAngles.length ){
       var randAngle = 5*index + parseInt( (Math.random()-.5)*1 );
@@ -927,7 +969,9 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
 
   // ----------
   // Function: childHit
-  // Called by one of the group's children when the child is clicked on. Returns an object:
+  // Called by one of the group's children when the child is clicked on. 
+  // 
+  // Returns an object:
   //   shouldZoom - true if the browser should launch into the tab represented by the child
   //   callback - called after the zoom animation is complete
   childHit: function(child) {
@@ -1024,6 +1068,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
 
   // ----------
+  // Function: collapse
+  // Collapses the group from the expanded "tray" mode. 
   collapse: function() {
     if(this.expanded) {
       var z = this.getZ();
@@ -1058,6 +1104,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
   
   // ----------  
+  // Function: _addHandlers
+  // Helper routine for the constructor; adds various event handlers to the container. 
   _addHandlers: function(container) {
     var self = this;
     
@@ -1115,6 +1163,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
 
   // ----------  
+  // Function: setResizable
+  // Sets whether the group is resizable and updates the UI accordingly.
   setResizable: function(value){
     var self = this;
     
@@ -1149,6 +1199,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   },
   
   // ----------
+  // Function: newTab
+  // Creates a new tab within this groups.
   newTab: function() {
     Groups.setActiveGroup(this);          
     var newTab = Tabs.open("about:blank", true);
@@ -1221,15 +1273,10 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
   // ----------
   // Function: reorderBasedOnTabOrder
   // Reorderes the tabs in a group based on the arrangment of the tabs
-  // shown in the tab bar. It doesn't it by sorting the children
+  // shown in the tab bar. It does it by sorting the children
   // of the group by the positions of their respective tabs in the
   // tab bar.
-  // 
-  // Parameters: 
-  //   topChild - the <Item> that should be displayed on top of a stack
-  reorderBasedOnTabOrder: function(topChild){    
-    this.topChild = topChild;
-    
+  reorderBasedOnTabOrder: function(){    
     var groupTabs = [];
     for( var i=0; i<UI.tabBar.el.children.length; i++ ){
       var tab = UI.tabBar.el.children[i];
@@ -1240,6 +1287,16 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
     this._children.sort(function(a,b){
       return groupTabs.indexOf(a.tab.raw) - groupTabs.indexOf(b.tab.raw)
     });
+    
+    this.arrange({animate: false});
+    // this.arrange calls this.save for us
+  },
+  
+  // ----------
+  // Function: setTopChild
+  // Sets the <Item> that should be displayed on top when in stack mode.
+  setTopChild: function(topChild){    
+    this.topChild = topChild;
     
     this.arrange({animate: false});
     // this.arrange calls this.save for us
@@ -1278,6 +1335,8 @@ window.Group.prototype = iQ.extend(new Item(), new Subscribable(), {
 window.Groups = {
   
   // ----------
+  // Function: init
+  // Sets up the object.
   init: function() {
     this.groups = [];
     this.nextID = 1;
@@ -1285,6 +1344,8 @@ window.Groups = {
   },
   
   // ----------
+  // Function: getNextID
+  // Returns the next unused group ID. 
   getNextID: function() {
     var result = this.nextID;
     this.nextID++;
@@ -1293,6 +1354,8 @@ window.Groups = {
   },
 
   // ----------
+  // Function: getStorageData
+  // Returns an object for saving Groups state to persistant storage. 
   getStorageData: function() {
     var data = {nextID: this.nextID, groups: []};
     iQ.each(this.groups, function(index, group) {
@@ -1303,6 +1366,8 @@ window.Groups = {
   },
   
   // ----------
+  // Function: saveAll
+  // Saves Groups state, as well as the state of all of the groups.
   saveAll: function() {
     this.save();
     iQ.each(this.groups, function(index, group) {
@@ -1311,6 +1376,8 @@ window.Groups = {
   },
   
   // ----------
+  // Function: save
+  // Saves Groups state. 
   save: function() {
     if (!this._inited) // too soon to save now
       return;
@@ -1319,6 +1386,9 @@ window.Groups = {
   },
 
   // ----------
+  // Function: reconstitute
+  // Restores to stored state, creating groups as needed.
+  // If no data, sets up blank slate (including "new tabs" group).
   reconstitute: function(groupsData, groupData) {
     try {
       if(groupsData && groupsData.nextID)
@@ -1370,6 +1440,8 @@ window.Groups = {
   },
   
   // ----------
+  // Function: groupStorageSanity
+  // Given persistant storage data for a group, returns true if it appears to not be damaged.
   groupStorageSanity: function(groupData) {
     // TODO: check everything 
     var sane = true;
@@ -1382,6 +1454,8 @@ window.Groups = {
   },
   
   // ----------
+  // Function: getGroupWithTitle
+  // Returns the <Group> that has the given title, or null if none found.
   getGroupWithTitle: function(title) {
     var result = null;
     iQ.each(this.groups, function(index, group) {
@@ -1395,6 +1469,8 @@ window.Groups = {
   }, 
  
   // ----------
+  // Function: getNewTabGroup
+  // Returns the "new tabs" <Group>, or null if not found.
   getNewTabGroup: function() {
     var groupTitle = 'New Tabs';
     var array = iQ.grep(this.groups, function(group) {
@@ -1408,6 +1484,8 @@ window.Groups = {
   },
 
   // ----------
+  // Function: getBoundsForNewTabGroup 
+  // Returns a <Rect> describing where the "new tabs" group should go. 
   getBoundsForNewTabGroup: function() {
     var pad = 0;
     var sw = window.innerWidth;
@@ -1418,13 +1496,17 @@ window.Groups = {
   },
 
   // ----------
+  // Function: repositionNewTabGroup
+  // Moves the "new tabs" group to where it should be. 
   repositionNewTabGroup: function() {
     var box = this.getBoundsForNewTabGroup();
     var group = this.getNewTabGroup();
     group.setBounds(box, true);
   },
   
-  // ----------  
+  // ---------- 
+  // Function: register
+  // Adds the given <Group> to the list of groups we're tracking. 
   register: function(group) {
     Utils.assert('group', group);
     Utils.assert('only register once per group', iQ.inArray(group, this.groups) == -1);
@@ -1432,6 +1514,8 @@ window.Groups = {
   },
   
   // ----------  
+  // Function: unregister
+  // Removes the given <Group> from the list of groups we're tracking.
   unregister: function(group) {
     var index = iQ.inArray(group, this.groups);
     if(index != -1)
@@ -1458,6 +1542,8 @@ window.Groups = {
   },
   
   // ----------  
+  // Function: arrange
+  // Arranges all of the groups into a grid. 
   arrange: function() {
     var bounds = Items.getPageBounds();
     var count = this.groups.length - 1;
@@ -1489,6 +1575,8 @@ window.Groups = {
   },
   
   // ----------
+  // Function: removeAll
+  // Removes all tabs from all groups (which automatically closes all unnamed groups).
   removeAll: function() {
     var toRemove = iQ.merge([], this.groups);
     iQ.each(toRemove, function(index, group) {
@@ -1497,6 +1585,8 @@ window.Groups = {
   },
   
   // ----------
+  // Function: newTab
+  // Given a <TabItem>, files it in the appropriate group. 
   newTab: function(tabItem) {
     var group = this.getActiveGroup();
     if( group == null )
@@ -1521,7 +1611,7 @@ window.Groups = {
   // to that group. The change is visible only if the tab bar is
   // visible.
   //
-  // Paramaters
+  // Paramaters:
   //  group - the active <Group> or <null> if no group is active
   //          (which means we have an orphaned tab selected)
   setActiveGroup: function(group) {
@@ -1539,12 +1629,12 @@ window.Groups = {
     if(this._activeGroup)
       UI.tabBar.showOnlyTheseTabs( this._activeGroup._children );
     else if( this._activeGroup == null)
-      UI.tabBar.showOnlyTheseTabs( this.getOrphanedTabs());
+      UI.tabBar.showOnlyTheseTabs( this.getOrphanedTabs(), {dontReorg: true});
   },
   
   // ----------
   // Function: getOrphanedTabs
-  // Returns an array of all tabs that aren't in a group
+  // Returns an array of all tabs that aren't in a group.
   getOrphanedTabs: function(){
     var tabs = TabItems.getItems();
     tabs = tabs.filter(function(tab){
