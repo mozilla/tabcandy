@@ -73,7 +73,8 @@ if( location.hash ){
 // Bugs
 function render(el, entries){
   var ul = $("<ul class='bugs'>");
-  for each( var entry in entries ){
+  for( var i=0; i<entries.length; i++){
+    var entry = entries[i];    
     var li = $("<li><span class='for'/> <a/></li>");
     var a = li.find("a");
     a.text( entry.title ).attr("href", entry.link);      
@@ -89,7 +90,8 @@ function render(el, entries){
 
 function renderByAssignee(el, entries){
   var bugs = {};
-  for each( var entry in entries ){
+  for( var i=0; i<entries.length; i++){
+    var entry = entries[i];    
     assignedTo = entry.content.match(/Assignee[\s\S]*?>(.*)</i)[1];
     if( bugs[assignedTo] == null ) bugs[assignedTo] = [];
     entry.assignee = assignedTo;
@@ -107,7 +109,7 @@ function renderByAssignee(el, entries){
 
 setTimeout(function(){
   var feed = new google.feeds.Feed("https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&classification=Other&component=TabCandy&email1=nobody&emailassigned_to1=1&emailtype1=notregexp&product=Mozilla%20Labs&query_format=advanced&title=Bug%20List&ctype=atom");
-  feed.setNumEntries(20);
+  feed.setNumEntries(100);
   feed.load(function(result) { renderByAssignee("#assigned", result.feed.entries) });
 
   var feed2 = new google.feeds.Feed("https://bugzilla.mozilla.org/buglist.cgi?bug_status=RESOLVED&bug_status=CLOSED&classification=Other&component=TabCandy&product=Mozilla%20Labs&query_format=advanced&resolution=FIXED&title=Bug%20List&ctype=atom");
@@ -126,13 +128,19 @@ var markdown = new Showdown.converter();
 
 $("<script/>").attr("src","http://azarask.in/projects/tabcandy/todo.php").appendTo("body");
 
+function renderSection(data, sectionName, id ){
+  var pattern = new RegExp("== "+ sectionName +" ==([\\s\\S]*?)==", "m");
+  var html = markdown.makeHtml(data.match(pattern)[1]);
+  $(id).html(html);
+}
+
 function onTodoReady(data){
-  var P1s = markdown.makeHtml(data.match(/== P1 ==([\s\S]*?)==/m)[1]);
-  var P2s = markdown.makeHtml(data.match(/== P2 ==([\s\S]*?)==/m)[1]);
-  var P3s = markdown.makeHtml(data.match(/== P3 ==([\s\S]*?)==/m)[1]);
-  $("#P1s").html(P1s);
-  $("#P2s").html(P2s);
-  $("#P3s").html(P2s);
+  renderSection( data, "P1", "#P1s" );
+  renderSection( data, "P2", "#P2s" );
+  renderSection( data, "P3", "#P3s" );    
+  renderSection( data, "Getting Started", "#getting-started" );
+  renderSection( data, "Documentation", "#documentation" );
+  renderSection( data, "Unit Tests", "#unit-tests" );    
 
   $(".panel").bugifier();
   $(".panel").linkify();  
