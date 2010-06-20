@@ -1,0 +1,1 @@
+naturaldocs/NaturalDocs -i content/js -o HTML content/doc -p naturaldocs-data -r
