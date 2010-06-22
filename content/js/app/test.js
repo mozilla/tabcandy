@@ -94,6 +94,13 @@ function test() {
     is($div.css('z-index'), value, 'z-index set');
     is($div.css('zIndex'), value, 'zIndex set');
   
+    var $img = iQ("<img/>");
+    ok($img, '$img');
+    
+    var src = 'chrome://tabcandy/content/img/app/stack-expander.png';
+    $img.attr('src', src);
+    is($img.attr('src'), src, 'src set');
+  
     // ___ TabItem
     var box = new Rect(10, 10, 100, 100);
     $div = iQ('<div>')
