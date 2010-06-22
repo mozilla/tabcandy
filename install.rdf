@@ -8,6 +8,8 @@
     <em:creator>Aza Raskin</em:creator>
     <em:contributor>Ian Gilman</em:contributor>
     <em:contributor>Michael Yoshitaka Erlewine</em:contributor>
+    <em:contributor>Ehsan Akhgari</em:contributor>
+    <em:contributor>Raymond Lee</em:contributor>
     <em:homepageURL>http://azarask.in/projects/tabcandy</em:homepageURL>    
     <em:description>The tab manager you've always wanted. Now in delicious candy form.</em:description>
     <em:iconURL>chrome://tabcandy/content/img/core/tabcandy.png</em:iconURL>
