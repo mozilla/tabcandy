@@ -43,7 +43,7 @@
 
 var windowMediator = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator);
 var win = windowMediator.getMostRecentWindow("navigator:browser");
-var originalButtonImage = "chrome://tabcandy/content/img/core/candybutton.png";
+var originalButtonImage = "chrome://tabcandy/content/img/tabcandy.png";
 
 
 function openAndReuseOneTabPerURL(url) {
@@ -94,11 +94,12 @@ function createButton(options){
   button.setAttribute('tooltiptext', options.tooltip);
   button.setAttribute('image', options.image);
   button.setAttribute('id', options.id);
+  button.setAttribute('class', 'toolbarbutton-1');
   button.style.opacity = .85;
 
   button.onclick = options.onclick;
-  button.onmouseover = function(){ button.style.opacity = 1.0 }
-  button.onmouseout = function(){ button.style.opacity = .85 }
+  button.onmouseover = function(){ button.style.opacity = 1.0 };
+  button.onmouseout = function(){ button.style.opacity = .85 };
 
   navBar.insertBefore(button, win.document.getElementById("urlbar-container"));
   return button;
@@ -140,7 +141,7 @@ else {
     get button(){
       return win.document.querySelector("#tabcandy-button");
     }
-  }
+  };
   context.Toolbar = Toolbar;
 }
 

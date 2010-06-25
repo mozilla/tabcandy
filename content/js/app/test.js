@@ -97,7 +97,7 @@ function test() {
     var $img = iQ("<img/>");
     ok($img, '$img');
     
-    var src = 'chrome://tabcandy/content/img/app/stack-expander.png';
+    var src = 'chrome://tabcandy/content/img/stack-expander.png';
     $img.attr('src', src);
     is($img.attr('src'), src, 'src set');
   
