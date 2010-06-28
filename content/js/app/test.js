@@ -121,9 +121,6 @@ function test() {
     box = new Rect(20, 20, 200, 200);
     tabItem.setBounds(box); 
     ok(box.equals(tabItem.getBounds()), 'set/get match');
-    tabItem.reloadBounds();
-    var box2 = tabItem.getBounds();
-    ok(box.equals(box2), 'reload match');   
     
     // ___ done
     Utils.log('unit tests done', testsRun, (testsFailed ? testsFailed + ' tests failed!!' : ''));
