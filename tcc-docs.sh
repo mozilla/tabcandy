@@ -1,0 +1,1 @@
+naturaldocs/NaturalDocs -i ../tabcandy-central/browser/base/content/tabcandy/ -o HTML content/doc -p naturaldocs-data -r
