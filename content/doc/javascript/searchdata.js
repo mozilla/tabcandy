@@ -57,7 +57,7 @@ var indexSectionsWithContent = {
       "W": false,
       "X": true,
       "Y": false,
-      "Z": false
+      "Z": true
       },
    "Functions": {
       "Symbols": true,
