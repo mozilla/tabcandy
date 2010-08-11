@@ -12,7 +12,7 @@ var indexSectionsWithContent = {
       "H": true,
       "I": true,
       "J": true,
-      "K": false,
+      "K": true,
       "L": true,
       "M": true,
       "N": true,
@@ -26,7 +26,7 @@ var indexSectionsWithContent = {
       "V": true,
       "W": true,
       "X": true,
-      "Y": true,
+      "Y": false,
       "Z": true
       },
    "Variables": {
@@ -56,7 +56,7 @@ var indexSectionsWithContent = {
       "V": false,
       "W": false,
       "X": true,
-      "Y": true,
+      "Y": false,
       "Z": true
       },
    "Functions": {
@@ -72,7 +72,7 @@ var indexSectionsWithContent = {
       "H": true,
       "I": true,
       "J": false,
-      "K": false,
+      "K": true,
       "L": true,
       "M": true,
       "N": true,
@@ -109,7 +109,7 @@ var indexSectionsWithContent = {
       "O": false,
       "P": true,
       "Q": false,
-      "R": true,
+      "R": false,
       "S": true,
       "T": true,
       "U": true,
